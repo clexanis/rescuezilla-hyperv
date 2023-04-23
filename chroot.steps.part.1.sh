@@ -61,7 +61,7 @@ sed --in-place s/COMPRESS=gzip/COMPRESS=lz4/g /etc/initramfs-tools/initramfs.con
 # https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 # https://ubuntu.com/about/release-cycle
 pkgs_specific_to_ubuntu2204_jammy=(
-                       "linux-generic"
+                       "linux-azure"
                        "xserver-xorg"
                        "xserver-xorg-video-all"
                        "xserver-xorg-video-intel"
