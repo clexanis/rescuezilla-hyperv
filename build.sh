@@ -298,7 +298,7 @@ rm chroot/root/.bash_history
 rm chroot/chroot.steps.part.1.sh chroot/chroot.steps.part.2.sh
 
 mkdir -p image/casper image/memtest
-cp chroot/boot/vmlinuz-*-generic image/casper/vmlinuz
+cp chroot/boot/vmlinuz-*-azure image/casper/vmlinuz
 if [[ $? -ne 0 ]]; then
     echo "Error: Failed to copy vmlinuz image."
     exit 1
@@ -306,7 +306,7 @@ fi
 # Ensures compressed Linux kernel image is readable during the MD5 checksum at boot
 chmod 644 image/casper/vmlinuz
 
-cp chroot/boot/initrd.img-*-generic image/casper/initrd.lz
+cp chroot/boot/initrd.img-*-azure image/casper/initrd.lz
 if [[ $? -ne 0 ]]; then
     echo "Error: Failed to copy initrd image."
     exit 1
