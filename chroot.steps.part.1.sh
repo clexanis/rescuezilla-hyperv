@@ -60,62 +60,6 @@ sed --in-place s/COMPRESS=gzip/COMPRESS=lz4/g /etc/initramfs-tools/initramfs.con
 # Hardware Enablement (HWE, also called LTS Enablement Stack) [1] [2]
 # https://wiki.ubuntu.com/Kernel/LTSEnablementStack
 # https://ubuntu.com/about/release-cycle
-pkgs_specific_to_ubuntu1804_bionic_32bit=("linux-generic-hwe-18.04"
-                        "xserver-xorg-hwe-18.04"
-                        "xserver-xorg-video-all-hwe-18.04"
-                        "xserver-xorg-video-intel-hwe-18.04"
-                        "xserver-xorg-video-qxl-hwe-18.04"
-                        # Python3.7 as Rescuezilla uses subprocess's "capture_output" parameter
-                        "python3.7"
-                        # Explicitly install dmidecode as it appears to have been pulled in on other distros by a dependency
-                        "dmidecode"
-)
-
-# Packages specific to Rescuezilla 64-bit build (currently based Ubuntu 20.04 Focal)
-# TODO: Switch to Hardware Enablement (HWE, also called LTS Enablement Stack) [1] [2]
-#       when it is released.
-# https://wiki.ubuntu.com/Kernel/LTSEnablementStack
-# https://ubuntu.com/about/release-cycle
-pkgs_specific_to_ubuntu2004_focal=("linux-generic-hwe-18.04"
-                       "xserver-xorg-hwe-18.04"
-                       "xserver-xorg-video-all-hwe-18.04"
-                       "xserver-xorg-video-intel-hwe-18.04"
-                       "xserver-xorg-video-qxl-hwe-18.04"
-                       # Packages which may assist users needing to do a GRUB repair (64-bit EFI)
-                       "shim-signed"
-                       "grub-efi-amd64-signed"
-                       "grub-efi-amd64-bin"
-                       "grub-efi-ia32-bin"
-                       # Dependency for partclone-utils' imagemount
-                       "nbdkit"
-                       "lupin-casper"
-                       # Replaced by exfatprogs
-                       "exfat-utils"
-                       # Removed since 22.10 Kinetic
-                       "plymouth-theme-ubuntu-logo"
-)
-
-pkgs_specific_to_ubuntu2110_impish=(
-			                 "linux-generic"
-                       "xserver-xorg"
-                       "xserver-xorg-video-all"
-                       "xserver-xorg-video-intel"
-                       "xserver-xorg-video-qxl"
-                       "xserver-xorg-video-mga"
-                       # Packages which may assist users needing to do a GRUB repair (64-bit EFI)
-                       "shim-signed"
-                       "grub-efi-amd64-signed"
-                       "grub-efi-amd64-bin"
-                       "grub-efi-ia32-bin"
-                       # Dependency for partclone-utils' imagemount
-                       "nbdkit"
-                       "lupin-casper"
-                       # Replaced by exfatprogs
-                       "exfat-utils"
-                       # Removed since 22.10 Kinetic
-                       "plymouth-theme-ubuntu-logo"
-)
-
 pkgs_specific_to_ubuntu2204_jammy=(
                        "linux-generic"
                        "xserver-xorg"
@@ -135,25 +79,6 @@ pkgs_specific_to_ubuntu2204_jammy=(
                        # Removed since 22.10 Kinetic
                        "plymouth-theme-ubuntu-logo"
 )
-
-pkgs_specific_to_ubuntu2210_kinetic=(
-                       "linux-generic"
-                       "xserver-xorg"
-                       "xserver-xorg-video-all"
-                       "xserver-xorg-video-intel"
-                       "xserver-xorg-video-qxl"
-                       "xserver-xorg-video-mga"
-                        # Packages which may assist users needing to do a GRUB repair (64-bit EFI)
-                       "shim-signed"
-                       "grub-efi-amd64-signed"
-                       "grub-efi-amd64-bin"
-                       "grub-efi-ia32-bin"
-                       # Dependency for partclone-utils' imagemount
-                       "nbdkit"
-                       # Replaces exfat-utils
-                       "exfatprogs"
-)
-
 
 # Languages on the system
 lang_codes=(
