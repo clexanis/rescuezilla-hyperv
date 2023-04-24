@@ -69,6 +69,9 @@ pkgs_specific_to_ubuntu1804_bionic_32bit=("linux-generic-hwe-18.04"
                         "python3.7"
                         # Explicitly install dmidecode as it appears to have been pulled in on other distros by a dependency
                         "dmidecode"
+                       # VM client additions
+                       "linux-tools-virtual-hwe-18.04"
+                       "linux-cloud-tools-virtual-hwe-18.04"
 )
 
 # Packages specific to Rescuezilla 64-bit build (currently based Ubuntu 20.04 Focal)
@@ -93,6 +96,9 @@ pkgs_specific_to_ubuntu2004_focal=("linux-generic-hwe-18.04"
                        "exfat-utils"
                        # Removed since 22.10 Kinetic
                        "plymouth-theme-ubuntu-logo"
+                       # VM client additions
+                       "linux-tools-virtual-hwe-18.04"
+                       "linux-cloud-tools-virtual-hwe-18.04"
 )
 
 pkgs_specific_to_ubuntu2110_impish=(
@@ -114,6 +120,9 @@ pkgs_specific_to_ubuntu2110_impish=(
                        "exfat-utils"
                        # Removed since 22.10 Kinetic
                        "plymouth-theme-ubuntu-logo"
+                       # VM client additions
+                       "linux-tools-virtual"
+                       "linux-cloud-tools-virtual"
 )
 
 pkgs_specific_to_ubuntu2204_jammy=(
@@ -134,6 +143,9 @@ pkgs_specific_to_ubuntu2204_jammy=(
                        "exfatprogs"
                        # Removed since 22.10 Kinetic
                        "plymouth-theme-ubuntu-logo"
+                       # VM client additions
+                       "linux-tools-virtual"
+                       "linux-cloud-tools-virtual"
 )
 
 pkgs_specific_to_ubuntu2210_kinetic=(
@@ -152,6 +164,9 @@ pkgs_specific_to_ubuntu2210_kinetic=(
                        "nbdkit"
                        # Replaces exfat-utils
                        "exfatprogs"
+                       # VM client additions
+                       "linux-tools-virtual"
+                       "linux-cloud-tools-virtual"
 )
 
 
