@@ -58,27 +58,27 @@ jobs:
       # Upload GitHub Action workflow *artifacts*. Note "artifacts" are a different concept to GitHub release rssets. The former is available on each GitHub Actions
       # workflow run. The latter is associated with only a pushed tag.
 
-      - uses: actions/upload-artifact@v3.1.2
+      - uses: actions/upload-artifact@v3.1.3
         with:
           name: SHA256SUM
           path: build/SHA256SUM
 
-      - uses: actions/upload-artifact@v3.1.2
+      - uses: actions/upload-artifact@v3.1.3
         with:
           name: MD5SUM
           path: build/MD5SUM
 
-      - uses: actions/upload-artifact@v3.1.2
+      - uses: actions/upload-artifact@v3.1.3
         with:
           name: SHA1SUM
           path: build/SHA1SUM
 
-      - uses: actions/upload-artifact@v3.1.2
+      - uses: actions/upload-artifact@v3.1.3
         with:
           name: rescuezilla_${{env.DEB_VERSION}}-1_all.deb
           path: build/rescuezilla_${{env.DEB_VERSION}}-1_all.deb
 
-      - uses: actions/upload-artifact@v3.1.2
+      - uses: actions/upload-artifact@v3.1.3
         with:
           name: rescuezilla-${{github.ref_name}}-64bit.jammy.iso
           path: build/rescuezilla-${{github.ref_name}}-64bit.jammy.iso
